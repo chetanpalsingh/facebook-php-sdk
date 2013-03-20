@@ -1,0 +1,18 @@
+$args = array(
+  'message' => 'Message',
+  'image'   => '@' . realpath($path_to_image),
+  'tags'    => array(
+     array(
+      'tag_uid'=> $friend1_uid,
+      'x'      => $x1,
+      'y'      => $y1,
+     ),
+     array(
+      'tag_uid' => $friend2_uid,
+      'x'       => $x2,
+      'y'       => $y2,
+     ),/*...*/
+   ),
+);
+
+$data = $facebook->api('/me/photos', 'post', $args);
